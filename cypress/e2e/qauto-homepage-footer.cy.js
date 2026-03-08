@@ -19,7 +19,8 @@ describe('HW 19.1 - Main page and footer check', () => {
 
   it('Checks hero section elements', () => {
 
-    // Проверка заголовка
+    
+  // проверка заголовка
     cy.contains('Do more!')
       .should('be.visible')
 
