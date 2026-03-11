@@ -1,6 +1,7 @@
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
+  projectId: 'local',
   e2e: {
     baseUrl: 'https://qauto.forstudy.space',
     viewportWidth: 1280,
@@ -9,16 +10,9 @@ module.exports = defineConfig({
     screenshotOnRunFailure: true,
     defaultCommandTimeout: 10000,
     setupNodeEvents(on, config) {},
-    reporter: 'mochawesome',
-    reporterOptions: {
-      reportDir: 'cypress/reports',
-      overwrite: false,
-      html: true,
-      json: true,
+    env: {
+      email: 'joe_brown@gmail.com',
+      password: 'Driftlife45',
     },
-  },
-  env: {
-    email: 'joe_brown@gmail.com',
-    password: 'Driftlife45',
   },
 })
